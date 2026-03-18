@@ -1,5 +1,5 @@
 # OnlineShop-Demo with Node.js/Express
-# Note: The UI of this project is currently only available in german
+Note: The UI of this project is currently only available in german <br>
 This project is a locally executable demo of a simple online shop, built for learning and demonstration purposes.
 The goal of this project is to showcase basic shop functionality including account creation without using an external database or backend hosting.
 
@@ -19,16 +19,16 @@ The goal of this project is to showcase basic shop functionality including accou
 - All data is automatically deleted when the application is closed
 
 # Installation and Run
-Requirements:
-  Node.js is installed (check with node --version in the terminal)
+Requirements: <br>
+  Node.js is installed (check with node --version in the terminal) <br> <br>
 Steps:
-  # Clone repository
+  - Clone repository: <br>
   git clone https://github.com/Krobi23/OnlineShop-Demo
-  # Navigate into project folder
-  cd OnlineShop-Demo
-  # Start application
-  node app.js
-  # Open the shown link into your browser
-  http://localhost:8020
-  # To close the local web-server type in the terminal
+  - Navigate into project folder
+  cd OnlineShop-Demo: <br>
+  - Start application
+  node app.js: <br>
+  - Open the shown link into your browser
+  http://localhost:8020: <br>
+  - To close the local web-server type in the terminal: <br>
   ctrl + C
