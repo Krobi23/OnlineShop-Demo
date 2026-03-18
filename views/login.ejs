@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+    <%- include('header') %>
+
+    <aside>
+        
+    </aside>
+
+    <main>
+        <div class="hintergrund">
+            <form action="/login" method="POST">
+                <h2>Log in</h2>
+                <% if(falscheingabe) { %>
+                    <p class="fehler">Nutzername oder Passwort falsch!</p>
+                <% } %>
+                <label>
+                    <p>Nutzername:</p> 
+                    <input type="text" name="username" maxlength="24" required autofocus>
+                </label>
+                <label>
+                    <p>Passwort:</p> 
+                    <input type="password" name="password" maxlength="24" required>
+                </label>
+                <br>
+                <div class="buttons">
+                    <input id="login" type="submit" value="Sign in">
+                    <a id="reg" href="/register-form">Register</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <%- include('footer') %>
+
+    <script src="js/forms.js"></script>
+
+</body>
+</html>

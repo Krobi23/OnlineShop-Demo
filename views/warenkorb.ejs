@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warenkorb</title>
+    <link rel="icon" type="image/png" href="img/shop.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/warenkorb.css">
+    <link rel="stylesheet" href="css/message.css">
+</head>
+<body>
+    <% if(message) { %>
+        <div id="message" class="toast"><%= message %></div>
+    <% } %>
+
+    <%- include('header') %>
+
+    <aside>
+        
+    </aside>
+
+    <main>
+        <div id="oben">
+            <h2></h2>
+            <p></p>
+        </div>
+
+        <div id="mitte">
+            <!--Hier Produkte mit DOM-Manipulation einfügen-->
+
+        </div>
+
+        <% if(warenkorb.length !== 0) { %>
+        <div id="unten">
+            <div id="space"></div>
+            <table id="kosten">
+                <tr id="zwsum">
+                    <td>Zwischensumme</td>
+                    <td></td>
+                </tr>
+                <tr id="versand">
+                    <td>Versand (Kostenlos ab Bestellwert von 40,00 €)</td>
+                    <td></td>
+                </tr>
+                <tr id="total">
+                    <td>Bestellsumme</td>
+                    <td></td>
+                </tr>
+            </table>
+            <form id="bestellen" action="/bestellen" method="POST">
+                <input type="submit" value="Demo-Bestellung abschließen">
+            </form>
+        </div>
+        <% } %>
+    </main>
+
+    <%- include('footer') %>
+
+    <!-- Warenkorb an warenkorb.js weiterleiten -->
+    <script> 
+        const warenkorb = <%- JSON.stringify(warenkorb) %> 
+    </script>
+    <script src="js/warenkorb.js"></script>
+    <script src="js/message.js"></script>
+</body>
+</html>

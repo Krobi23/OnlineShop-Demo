@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forbidden</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/center.css">
+</head>
+<body>
+    <%- include('header') %>
+
+    <aside>
+        
+    </aside>
+
+    <main>
+        <% if(eingeloggt) { %>
+            <h2>Sie sind bereits eingeloggt.</h2>
+        <% } else { %>
+            <h2>Bitte loggen Sie sich vorher ein.</h2>
+            <a href="login-form">zum Log in</a>
+        <% } %>
+    </main>
+
+    <%- include('footer') %>
+
+</body>
+</html>

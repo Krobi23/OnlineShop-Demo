@@ -1,0 +1,89 @@
+h2 {
+    margin-top: 0px;
+    font-size: 28px;
+    user-select: none;
+}
+
+.hintergrund {
+    background-color: rgb(240, 235, 234);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin: 10px;
+    height: 95%;
+}
+
+.fehler {
+    color: crimson;
+    font-size: 14px;
+}
+
+main form {
+    background-color: white;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    border-radius: 12px;
+    padding: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+main [type="text"], main [type="password"] {
+    border-radius: 6px;
+    border-width: 1.5px;
+    height: 22px;
+    width: 200px;
+}
+
+main input:user-invalid {
+    border-color: crimson;
+}
+
+form p {
+    margin-bottom: 2px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons > * {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 24px;
+    margin-bottom: 6px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 4px;
+    padding-bottom: 6px;
+    /* Buttons gleich aussehen lassen */
+    border-style: none;
+    border-color: gray;
+    border-radius: 16px;
+    border-width: 1.5px;
+    width: 90px;
+    background-color: orange;
+    color: white;
+}
+
+#login:hover, #create:hover {
+    background-color: rgb(223, 163, 51);
+}
+
+#reg {
+    background-color: black;
+    text-decoration: none;
+}
+
+#reg:hover {
+    background-color: rgb(87, 85, 85);
+}
+
+#create {
+    width: 120px;
+    margin-left: 50px;
+    margin-right: 50px;
+}

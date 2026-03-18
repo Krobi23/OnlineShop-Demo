@@ -1,0 +1,264 @@
+/* Zusatzleiste */
+aside {
+    height: 50px;
+    display: flex;
+    justify-content: right; /* horizontal */
+    align-items: center; /* vertikal */
+}
+
+aside input {
+    border-radius: 10px;
+}
+
+aside [type="submit"] {
+    margin-right: 10px;
+}
+
+aside [type="text"] {
+    width: 250px;
+}
+
+/* Hauptinhalt */
+ul {
+    display: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 200px auto;
+}
+
+#shop {
+    margin: 16px;
+    background-color: rgb(185, 185, 185);
+    border-radius: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+/* Seitenmenü */
+#menu h2 {
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 16px;
+    margin-bottom: 16px;
+}
+
+#menu > div {
+    position: sticky;
+    top: 0;
+}
+
+ul {
+    margin: 0px;
+    text-align: center;
+    padding: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+li {
+    font-size: 18px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+}
+
+dl > *, li  {
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width: 1px;
+    border-color: black;
+}
+
+dl > *:hover, li:hover {
+    background-color: lightgrey;
+}
+
+dt:first-child {
+    border-top-width: 1px;
+}
+
+dt, dd, li, #menu h2 {
+    user-select: none;
+}
+
+dt {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+}
+
+dd {
+    font-size: 18px;
+    margin-left: 10px;
+    padding-left: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+/* Produktvisitenkarten */
+.visitenkarte {
+    margin: 16px;
+    background-color: white;
+    height: 120px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: gray;
+}
+
+.visitenkarte:hover {
+    transform: scale(1.04);
+}
+
+.visitenkarte img {
+    border-style: solid;
+    border-width: 0px;
+    border-right-width: 0.5px;
+    border-color: lightgrey;
+}
+
+.produktinfos * {
+    margin: 0px;
+}
+
+.produktinfos > * {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.produktinfos {
+    display: grid;
+    grid-template-rows:30% auto 30%;
+    grid-template-columns: 60% 40%;
+    grid-template-areas:    "prodname preis"
+                            "beschr beschr"
+                            "hinzu hinzu";
+}
+
+.preis { 
+    grid-area: preis; 
+    display: flex;
+    justify-content: right;
+    align-items: end;
+}
+.preis > p {
+    font-weight: bold;
+    font-size: 20px;
+}
+.produktname { 
+    grid-area: prodname; 
+    margin-right: 0px;
+    display: flex;
+    justify-content: left;
+    align-items: end;
+}
+.produktname > h3 {
+    font-size: 18px;
+}
+/* Zu grosse Überschriften verkleinern */
+.produktname > h3.zu-gross {
+    font-size: 16px;
+    line-height: 1.1;
+}
+.produktinfos > p { grid-area: beschr; }
+.produkt-hinzu { 
+    grid-area: hinzu;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.produktinfos input {
+    background-color: rgb(49, 172, 49);
+    color: white;
+    -webkit-text-stroke: 0.5px lightgray;
+    font-style: italic;
+    font-weight: bold;
+    border-radius: 7px;
+    border-color: black;
+    width: 152px;
+    height: 26px;
+}
+
+.produktinfos input:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+/* Media-Querries */
+@media screen and (max-width: 570px) {
+    aside {
+        justify-content: center;
+    }
+
+    aside input {
+        margin-right: 0px;
+    }
+
+    ul {
+        display: block;
+    }
+
+    main {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto 1fr;
+    }
+
+    #shop {
+        justify-content: center;
+        overflow-y: scroll;
+    }
+
+    /* Seitenmenü ändern */
+    #menu h2 {
+        display: none;
+    }
+
+    li {
+        margin-top: 12px;
+    }
+
+    .active-filter {
+        color: orange;
+    }
+
+    dl > dt {
+        border-width: 0px;
+        padding-right: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    dt:first-child { /* Muss auch überschrieben */
+        border-top-width: 0px;
+    }
+
+    dl > dd {
+        display: none;
+    }
+
+    dl {
+        display: flex;
+        justify-content: center;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 0px;
+        border-style: solid;
+        border-width: 0px;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+    }
+}

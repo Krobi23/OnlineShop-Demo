@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startseite</title>
+    <link rel="icon" type="image/png" href="img/shop.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <%- include('header') %>
+
+    <aside>
+        
+    </aside>
+
+    <main>
+        <div id="disclaimer">
+            <h2>Wichtiger Hinweis:</h2>
+            <section>
+                <p>
+                    Dieser Online-Shop ist ein nicht-kommerzielles Demo-Projekt und dient ausschließlich Präsentationszwecken. 
+                    Es können keine echten Bestellungen aufgegeben oder Zahlungen durchgeführt werden. Alle dargestellten Produkte, 
+                    Preise und Funktionen sind rein fiktiv, und es besteht kein Anspruch auf Lieferung oder Leistung.
+                </p>
+                <p>
+                    Die verwendeten Produktbilder wurden gezielt mithilfe von Künstlicher Intelligenz erstellt, um mögliche 
+                    Urheberrechtsverletzungen zu vermeiden. Es werden keine urheberrechtlich geschützten Originalbilder realer Produkte verwendet. 
+                    Die Darstellungen dienen ausschließlich der visuellen Veranschaulichung und sollen in keinem direkten Bezug zu tatsächlich existierenden Produkten oder Marken stehen.
+                </p>
+                <p>
+                    Bitte geben Sie keine sensiblen oder persönlichen Daten ein, da Eingaben lediglich zu Demonstrationszwecken dienen.
+                </p>
+            </section>
+            <p>
+                <a href="/datenschutz">
+                    Impressum und Datenschutz
+                </a>
+            </p>
+        </div>
+
+        <a id="shop" href="/shop">
+            <img src="img/shop.png" alt="Einkaufstasche" width="120" heigth="120">
+            <section>
+                <h2><span>Online</span><wbr>Shop</h2>
+                <p>entdecken</p>
+            </section>
+        </a>
+
+        <a id="projects" href="https://github.com/Krobi23?tab=repositories">
+            <img src="img/tools.png" alt="Hammer und Schraubenschlüssel" width="120" heigth="120">
+            <section>
+                <p>weitere</p>
+                <h2>Projekte</h2>
+            </section>
+        </a>
+    </main>
+
+    <%- include('footer') %>
+
+</body>
+</html>

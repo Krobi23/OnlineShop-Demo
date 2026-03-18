@@ -1,0 +1,20 @@
+<header>
+    <% if(eingeloggt) { %>
+        <form class="logout" action="/logout" method="POST"> <input type="submit" value="Logout"> </form>
+    <% } else { %>
+        <p class="logreg"><a href="/login-form">Login</a> | <a href="/register-form">Register</a></p>
+    <% } %>
+</header>
+
+<nav>
+    <div>
+        <h1><span>Online</span>Shop</h1>
+    </div>
+    <div class="navi">
+        <a href="/">Home</a>
+        <a href="/shop">Shop</a>
+        <% if(eingeloggt) { %>
+            <a href="/warenkorb">Warenkorb</a>
+        <% } %>
+    </div>
+</nav>

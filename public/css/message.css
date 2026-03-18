@@ -1,0 +1,13 @@
+/* Toast-Messege */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    z-index: 12;
+}

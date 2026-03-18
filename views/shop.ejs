@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="icon" type="image/png" href="img/shop.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/message.css">
+</head>
+<body>
+    <% if(message) { %>
+        <div id="message" class="toast"><%= message %></div>
+    <% } %>
+
+    <%- include('header') %>
+
+    <aside>
+        <form action="/suche" method="POST">
+            <label><input type="text" name="suchanfrage"> <input type="submit" value="Suchen"></label>
+        </form>
+    </aside>
+
+    <main>
+        <div id="menu">
+            <div>
+                <h2>Filter</h2>
+                <dl>
+                    <!--Filterkategorien mit DOM-Manipulation-->
+                </dl>
+            </div>
+        </div>
+
+        <ul>
+            <!--Unterkategorien des Ausgewählten Filters mit DOM-Manipulation-->
+        </ul>
+
+        <div id="shop">
+            <!--Produktvisitenkarten mit DOM-Manipulation-->
+        </div>
+    </main>
+
+    <%- include('footer') %>
+
+    <!-- die Artikel an shop.js weiterleiten -->
+    <script> 
+        const eingeloggt = <%- JSON.stringify(eingeloggt) %> 
+        const artikelliste = <%- JSON.stringify(artikelliste) %> 
+    </script>
+    <script src="js/shop.js"></script>
+    <script src="js/message.js"></script>
+</body>
+</html>

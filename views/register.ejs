@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+    <%- include('header') %>
+
+    <aside>
+        
+    </aside>
+
+    <main>
+        <div class="hintergrund">
+            <form action="/register" method="POST">
+                <h2>Register</h2>
+                <% if(falscheingabe) { %>
+                    <p class="fehler">Nutzername ist bereits vergeben.</p>
+                <% } %>
+                <label>
+                    <p>Nutzername:</p> 
+                    <input type="text" name="username" pattern="^[^\s]+$" title="Nutzername darf keine Leerzeichen enthalten" maxlength="24" required autofocus>
+                </label>
+                <label>
+                    <p>Passwort:</p> 
+                    <input type="password" name="password" pattern="^[A-Za-z0-9]+$" title="Passwort muss aus mind. 8 Zeichen bestehen und darf nur Buchstaben und Zahlen, ohne Umlaute, enthalten." minlength="8" maxlength="24" required>
+                </label>
+                <br>
+                <div class="buttons">
+                    <input id="create" type="submit" value="Create Account">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <%- include('footer') %>
+
+    <script src="js/forms.js"></script>
+
+</body>
+</html>

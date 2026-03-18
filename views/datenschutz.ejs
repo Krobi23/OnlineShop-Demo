@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum und Datenschutz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        main {
+            padding: 0px 24px;
+        }
+    </style>
+</head>
+<body>
+    <%- include('header') %>
+
+    <aside>
+        
+    </aside>
+
+    <main>
+        <section>
+            <h2>Impressum</h2>
+            <p>Name: Noel Koblitz</p>
+            <p>Kontakt: <a href="https://github.com/Krobi23">Git-Hub</a></p>
+            <p>
+                Hinweis:<br>
+                Dieses Projekt ist ein nicht kommerzielles Entwicklungsprojekt und dient ausschließlich Demonstrationszwecken.
+            </p>
+        </section>
+        <section>
+            <h2>Dateschutzerklärung</h2>
+            <section>
+                <h3>1. Allgemeine Hinweise</h3>
+                <p>
+                    Dieses Projekt ist eine lokal ausführbare Webanwendung und wird nicht als öffentlich zugänglicher Online-Dienst betrieben.
+                </p>
+            </section>
+
+            <section>
+                <h3>2. Verarbeitung von Daten innerhalb der Anwendung</h3>
+                <p>
+                    Innerhalb der Anwendung können Nutzereingaben (z.B. im Rahmen eines simulierten Onlineshops) verarbeitet werden.
+                </p>
+                <p>Diese Daten:</p>
+                <ul>
+                    <li>werden ausschließlich lokal im Arbeitsspeicher (z.B. in Arrays oder Objekten) verarbeitet</li>
+                    <li>werden nicht dauerhaft gespeichert</li>
+                    <li>werden nicht an Dritte oder den Anbieter übermittelt</li>
+                </ul>
+                <p>Beim Beenden der Anwendung werden sämtliche Daten automatisch gelöscht.</p>
+            </section>
+
+            <section>
+                <h3>3. Keine externe Datenverarbeitung</h3>
+                <p>Es erfolgt keine:</p>
+                <ul>
+                    <li>Speicherung in einer Datenbank</li>
+                    <li>Übertragung an externe Server</li>
+                    <li>Weitergabe an Dritte</li>
+                </ul>
+                <p>Die gesamte Datenverarbeitung findet ausschließlich lokal auf dem System des Nutzers statt.</p>
+            </section>
+
+            <section>
+                <h3>4. Externe Bibliotheken</h3>
+                <p>
+                    Das Projekt kann externe Bibliotheken oder Frameworks enthalten (z.B. Express). 
+                    Diese werden lokal eingebunden und führen keine eigenständige Datenübertragung durch den Anbieter aus.
+                </p>
+            </section>
+
+            <section>
+                <h3>5. Rechte der Nutzer</h3>
+                <p>
+                    Da keine personenbezogenen Daten durch den Anbieter gespeichert oder verarbeitet werden, 
+                    bestehen keine entsprechenden Auskunfts-, Lösch- oder Berichtigungsansprüche gegenüber dem Anbieter im Rahmen dieses Projekts.
+                </p>
+            </section>
+            
+        </section>
+    </main>
+
+    <%- include('footer') %>
+
+</body>
+</html>

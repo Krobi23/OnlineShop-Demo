@@ -1,0 +1,175 @@
+/* Oberer Bereich */
+#oben {
+    position: sticky;
+    top: 0;
+    padding-top: 16px;
+    text-align: center;
+    background-color: white;
+    z-index: 10;
+}
+
+#oben > h2 {
+    margin: 0px;
+}
+
+#oben > p {
+    margin: 2px 24px;
+    padding-bottom: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(165, 164, 164);
+    border: 0px solid gray;
+    border-bottom-width: 1px;
+
+}
+
+/* Mittlerer Bereich */
+#mitte {
+    display: flex;
+    flex-direction: column;
+}
+
+.produkt {
+    display: grid;
+    grid-template-columns: 60% 10% 30%;
+    padding: 12px 0px;
+    margin: 0px 32px;
+    border: 0px solid gray;
+    border-top-width: 1px;
+}
+
+.produkt:first-child {
+    border-top-width: 0px;
+}
+
+/* Produktbild */
+img {
+    border: 0.5px solid lightgray;
+    border-radius: 6px;
+}
+
+.bild {
+    display: flex;
+}
+
+.produkt h3 {
+    margin: 0px;
+    margin-left: 16px;
+    font-size: 22px;
+}
+
+/* Anzahl */
+.anzahl {
+    text-align: center;
+}
+
+.anzahl > select {
+    background-color: white;
+    width: 48px;
+    height: 24px;
+    border-width: 1.5px;
+    border-color: grey;
+    border-radius: 5px;
+    padding: 1px 6px;
+}
+
+/* Remove-Button */
+.preis {
+    text-align: right;
+}
+
+.preis input {
+    margin: 8px 0px;
+    background-color: white;
+    color: crimson;
+    border-color: crimson;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 70px;
+    height: 20px;
+}
+
+.preis input:hover {
+    background-color: lightgray;
+}
+
+/* Unterer Bereich */
+#unten {
+    position: sticky;
+    bottom: 0;
+    text-align: center;
+    background-color: white;
+    z-index: 10;
+    margin: 0px 24px;
+    border: 0px solid gray;
+    border-top-width: 1px;
+    /* Layout */
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto auto;
+    grid-template-areas:    "space kosten"
+                            "space bestell";
+}
+
+#space {
+    grid-area: space;
+}
+
+/* Kosten-Tabelle */
+#kosten {
+    grid-area: kosten;
+}
+
+td {
+    text-align: right;
+    margin: 0px;
+    padding: 3px 0px;
+}
+
+td:first-child {
+    text-align: left;
+}
+
+#total > td {
+    border: 0px solid gray;
+    border-top-width: 1px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Bestell-Button */
+#bestellen {
+    grid-area: bestell;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#bestellen [type="submit"] {
+    border-style: none;
+    color: white;
+    background-color: rgb(31, 31, 31);
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 10px 24px;
+    margin: 10px 24px;
+}
+
+#bestellen [type="submit"]:hover {
+    background-color: rgb(87, 85, 85);
+}
+
+@media screen and (max-width: 570px) {
+    #space {
+        display: none;
+    }
+
+    #bestellen {
+        justify-content: center;
+    }
+
+    #unten {
+        grid-template-areas:    "kosten kosten"
+                                "bestell bestell";
+    }
+}
