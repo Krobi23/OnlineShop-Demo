@@ -24,11 +24,15 @@ Requirements: <br>
 Steps:
   - Clone repository: <br>
   git clone https://github.com/Krobi23/OnlineShop-Demo
-  - Navigate into project folder
-  cd OnlineShop-Demo: <br>
-  - Start application
-  node app.js: <br>
-  - Open the shown link into your browser
-  http://localhost:8020: <br>
+  - Navigate into project folder: <br>
+  cd OnlineShop-Demo
+  - Install required npm-packages: <br>
+  npm install express
+  npm install express-sessions
+  npm install ejs
+  - Start application: <br>
+  node app.js
+  - Open the shown link into your browser: <br>
+  http://localhost:8020
   - To close the local web-server type in the terminal: <br>
   ctrl + C
