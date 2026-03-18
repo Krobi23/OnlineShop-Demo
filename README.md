@@ -27,12 +27,33 @@ Steps:
   - Navigate into project folder: <br>
   cd OnlineShop-Demo
   - Install required npm-packages: <br>
-  npm install express
-  npm install express-sessions
-  npm install ejs
+  npm install express <br>
+  npm install express-sessions <br>
+  npm install ejs <br>
   - Start application: <br>
   node app.js
   - Open the shown link into your browser: <br>
   http://localhost:8020
   - To close the local web-server type in the terminal: <br>
   ctrl + C
+
+# Preview
+Homepage of this Website (Login/Register-options availabe in the top-right corner):
+![Homepage](screenshots/home.png)
+Shop-page (Add to cart buttons become only available after login):
+![Fictitious product list and some filter options on the left side](screenshots/shop.png)
+Cart-page (This page entirely becomes only available after login):
+![A list of all items put into cart](screenshots/cart.png)
+
+# Note
+This project is not a production-ready online shop. It is intended soloey as:
+- a lerning project
+- a demonstration of basic webshop funtionality
+- part of my developer portfolio
+
+# Privacy
+  - No storage of personal data
+  - No data transmission to external servers
+  - All processing happens locally
+
+For more details, see the privacy policy (Datenschutzerklärung) included in this project
