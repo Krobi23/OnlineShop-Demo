@@ -47,7 +47,7 @@ Cart-page (This page entirely becomes only available after login):
 ![A list of all items put into cart](screenshots/cart.png)
 
 # Note
-This project is not a production-ready online shop. It is intended soloey as:
+This project is not a production-ready online shop. It is intended solely as:
 - a lerning project
 - a demonstration of basic webshop funtionality
 - part of my developer portfolio
