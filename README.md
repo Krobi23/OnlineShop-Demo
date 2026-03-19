@@ -20,7 +20,8 @@ The goal of this project is to showcase basic shop functionality including accou
 
 # Installation and Run
 Requirements: <br>
-  Node.js is installed (check with node --version in the terminal) <br> <br>
+  - Node.js is installed (check with node --version in the terminal)
+
 Steps:
   - Clone repository: <br>
   git clone https://github.com/Krobi23/OnlineShop-Demo
